@@ -1,8 +1,8 @@
 import Header from "./Header";
-import ForecastWeather from "./ForecastWeather";
 import {CurrentApi} from "../api/CurrentApi";
 import CurrentWeather from "./CurrentWeather";
 import {CityProvider} from "../api/CityApi";
+import ForecastWeather from "./ForecastWeather";
 
 const MainPage = () => {
 
@@ -20,7 +20,7 @@ const MainPage = () => {
     return (
         <div className={"container"}>
             <Header/>
-            <CityProvider city={"Katowice"}>
+            <CityProvider city={"Opole"}>
                 <CurrentApi date={currentDate()}>
                     <CurrentWeather/>
                 </CurrentApi>

@@ -1,6 +1,8 @@
 import {createContext, useContext, useEffect, useState} from "react";
-import {getWeatherIcon} from "../components/IconProvider";
 import {CityApi} from "./CityApi";
+import {getWeatherIcon} from "../provider/IconProvider";
+import {getWeatherBcg} from "../provider/ImgProvider";
+import {getBackgroundColor} from "../provider/BackgroundProvider";
 
 const CurrentContext = createContext();
 
@@ -11,6 +13,7 @@ export const CurrentWeatherApi = () => {
 export const CurrentApi = ({children, date}) => {
     const [currentWeather, setCurrentWeather] = useState({});
     const [iconPath, setIconPath] = useState("");
+    const [backgroundClass, setBackgroundClass] = useState("");
     const {coordinates} = CityApi();
 
     const fetchCurrentWeather = async () => {
@@ -50,11 +53,13 @@ export const CurrentApi = ({children, date}) => {
     useEffect(() => {
         if (currentWeather.weather_code) {
             setIconPath(getWeatherIcon(currentWeather.weather_code));
+            setBackgroundClass(getWeatherBcg(currentWeather.weather_code));
+            document.body.className = getBackgroundColor(currentWeather.weather_code);
         }
     }, [currentWeather]);
 
     return (
-        <CurrentContext.Provider value={{currentWeather, iconPath}}>
+        <CurrentContext.Provider value={{currentWeather, iconPath, backgroundClass}}>
             {children}
         </CurrentContext.Provider>
     )

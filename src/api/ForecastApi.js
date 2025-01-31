@@ -1,5 +1,6 @@
 import {createContext, useContext, useEffect, useState} from "react";
-import {getWeatherIcon} from "../components/IconProvider";
+import {getWeatherIcon} from "../provider/IconProvider";
+
 
 const ForecastContext = createContext();
 

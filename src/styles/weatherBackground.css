@@ -1,0 +1,49 @@
+.cloud {
+    background-image: url("../assets/img/cloud.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.fog {
+    background-image: url("../assets/img/fog.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rain {
+    background-image: url("../assets/img/rain.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.snow {
+    background-image: url("../assets/img/snow.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.thunder {
+    background-image: url("../assets/img/thunder.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sun {
+    background-image: url("../assets/img/sun.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.default {
+    background-image: url("../assets/img/deafault.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+

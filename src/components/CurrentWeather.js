@@ -1,9 +1,9 @@
 import { CurrentWeatherApi} from "../api/CurrentApi";
-import {useState} from "react";
-import {CityApi} from "../api/CityApi";
+import { useState } from "react";
+import { CityApi } from "../api/CityApi";
 
 const CurrentWeather = () => {
-    const {currentWeather, iconPath} = CurrentWeatherApi();
+    const {currentWeather, iconPath, backgroundClass} = CurrentWeatherApi();
     const {setCurrentCity, currentCity} = CityApi();
     const [inputValue, setInputValue] = useState("");
 
@@ -21,7 +21,7 @@ const CurrentWeather = () => {
     }
 
     return (
-        <div className={"current-container"}>
+        <div className={`current-container ${backgroundClass}`}>
             <div className={"left"}>
                 <div className={"city"}>
                     <span>{currentCity}</span>

@@ -1,0 +1,24 @@
+.cloud-body {
+    background-color: #838383;
+}
+
+.fog-body {
+    background-color: #c5c3c3;
+}
+
+.rain-body {
+    background-color: #1a1a1a;
+}
+
+.snow-body {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.thunder-body {
+    background-color: #4b1a36;
+}
+
+.sun-body {
+    background-color: #133b84;
+}
